@@ -1810,6 +1810,7 @@ body.light-mode   .ft-icon-btn {
   border-radius: 12px;
   background: var(--ft-s2, rgba(255,255,255,0.07));
   border: 1px solid var(--ft-border, rgba(255,255,255,0.08));
+  color: var(--ft-txt, rgba(255,255,255,0.85));
   cursor: pointer;
   padding: 0;
   flex-shrink: 0;
@@ -1825,22 +1826,16 @@ body.light-mode   .ft-icon-btn {
   transform: scale(0.93);
 }
 
-/* Três barras do hambúrguer */
+/* Ícone SVG hambúrguer */
 .ft-sidebar-bars {
-  display: flex;
-  flex-direction: column;
-  gap: 4.5px;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-}
-.ft-sidebar-bars span {
   display: block;
-  width: 16px;
-  height: 1.8px;
-  border-radius: 2px;
-  background: var(--ft-txt-soft, rgba(255,255,255,0.6));
-  transition: transform 0.22s, opacity 0.18s, width 0.2s;
+  flex-shrink: 0;
+  overflow: visible;
+}
+.ft-sidebar-bars rect {
+  transition: transform 0.22s, opacity 0.18s;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
 /* Tema claro (arctic / light-mode) */
@@ -1848,8 +1843,9 @@ body.theme-arctic .ft-btn-sidebar,
 body.light-mode   .ft-btn-sidebar {
   background: rgba(0,0,0,0.06);
   border-color: rgba(0,0,0,0.10);
+  color: rgba(0,0,0,0.65);
 }
-body.theme-arctic .ft-sidebar-bars span,
-body.light-mode   .ft-sidebar-bars span {
-  background: rgba(0,0,0,0.55);
+body.theme-arctic .ft-sidebar-bars,
+body.light-mode   .ft-sidebar-bars {
+  color: rgba(0,0,0,0.65);
 }

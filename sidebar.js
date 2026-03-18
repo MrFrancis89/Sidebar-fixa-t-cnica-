@@ -537,11 +537,12 @@ function _criarBotaoHamburger() {
     btn.setAttribute('aria-expanded', 'false');
     btn.setAttribute('aria-controls', 'sidebar-panel');
     btn.innerHTML = `
-        <span class="btn-sidebar-bars" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-        </span>`;
+        <svg class="btn-sidebar-bars" width="18" height="14" viewBox="0 0 18 14"
+             fill="currentColor" aria-hidden="true">
+            <rect x="1" y="0"  width="16" height="2" rx="1"/>
+            <rect x="1" y="6"  width="16" height="2" rx="1"/>
+            <rect x="1" y="12" width="16" height="2" rx="1"/>
+        </svg>`;
 
     // Insere como PRIMEIRO filho do header-container (canto esquerdo)
     headerContainer.insertBefore(btn, headerContainer.firstElementChild);

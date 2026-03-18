@@ -7551,6 +7551,7 @@ body.theme-midnight .sidebar-panel {
     border-radius: 12px;
     background: var(--surface-2);
     border: 1px solid var(--glass-border);
+    color: var(--text-soft);
     cursor: pointer;
     padding: 0;
     flex-shrink: 0;
@@ -7564,35 +7565,27 @@ body.theme-midnight .sidebar-panel {
     transform: scale(0.93);
 }
 
-/* Três barras do hambúrguer */
+/* Ícone SVG hambúrguer */
 .btn-sidebar-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 4.5px;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-}
-.btn-sidebar-bars span {
     display: block;
-    width: 16px;
-    height: 1.8px;
-    border-radius: 2px;
-    background: var(--text-soft);
+    flex-shrink: 0;
+    overflow: visible;
+}
+.btn-sidebar-bars rect {
     transition: transform 0.22s var(--spring), opacity 0.18s, width 0.2s;
+    transform-box: fill-box;
+    transform-origin: center;
 }
 /* Animação das barras quando aberto */
-body.sidebar-is-open .btn-sidebar-toggle .btn-sidebar-bars span:nth-child(1) {
-    transform: translateY(6.3px) rotate(45deg);
-    width: 16px;
+body.sidebar-is-open .btn-sidebar-toggle .btn-sidebar-bars rect:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
 }
-body.sidebar-is-open .btn-sidebar-toggle .btn-sidebar-bars span:nth-child(2) {
+body.sidebar-is-open .btn-sidebar-toggle .btn-sidebar-bars rect:nth-child(2) {
     opacity: 0;
     transform: scaleX(0);
 }
-body.sidebar-is-open .btn-sidebar-toggle .btn-sidebar-bars span:nth-child(3) {
-    transform: translateY(-6.3px) rotate(-45deg);
-    width: 16px;
+body.sidebar-is-open .btn-sidebar-toggle .btn-sidebar-bars rect:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 /* ── Tema Arctic / Light ─────────────────────────────────────────────────── */
